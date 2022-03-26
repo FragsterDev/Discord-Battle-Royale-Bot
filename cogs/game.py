@@ -53,20 +53,20 @@ class Game(commands.Cog):
         with open("channels.json","r") as f:
             channel=json.load(f)
         if count[str(ctx.guild.id)] !=0:
-            e=discord.Embed(color=discord.Colour.yellow())
+            e=discord.Embed(color=discord.Colour.orange())
             e.add_field(name="Status: Active",value=f"Currently the game is active in <#{channel[str(ctx.guild.id)]}>\n"
                                                  f"{count[str(ctx.guild.id)]} members have been eliminated so far.\n"
                                                  "Use `reset` to reset the count and stop the game.",inline=False)
             await ctx.send(embed=e)
         else:
             if channel[str(ctx.guild.id)] == 0:
-                e=discord.Embed(color=discord.Colour.yellow())
+                e=discord.Embed(color=discord.Colour.orange())
                 e.add_field(name="Status: Inactive",value="The game isn't running currently.\n"
                                                           "Use `set_channel <channel_id>` to set the\n"
                                                           "battle ground channel and start playing the game.",inline=False)
                 await ctx.send(embed=e)
             else:
-                e = discord.Embed(color=discord.Colour.yellow())
+                e = discord.Embed(color=discord.Colour.orange())
                 e.add_field(name="Status: Inactive", value="The game isn't running currently.\n"
                                                        f"You can play the game in <#{channel[str(ctx.guild.id)]}>.",inline=False)
                 await ctx.send(embed=e)
