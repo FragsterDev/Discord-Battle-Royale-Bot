@@ -44,4 +44,4 @@ async def reload(ctx, extension):
 
 
 
-client.run("OTAwMjYyNjU5NjM3Nzk2OTI0.YW-w8A.cGSjLIVMxwYWPH59K4VP6JJdyc0")
+client.run("<your bot token>")
